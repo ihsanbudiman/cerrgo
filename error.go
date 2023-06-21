@@ -27,3 +27,10 @@ func GetErrResponse(err error) map[string]interface{} {
 		"message": err.Error(),
 	}
 }
+
+func NewError(code int, message string) error {
+	return &Error{
+		Code:    code,
+		Message: message,
+	}
+}
