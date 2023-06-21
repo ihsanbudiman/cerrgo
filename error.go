@@ -33,9 +33,9 @@ func GetErrResponse(err error) map[string]interface{} {
 	}
 }
 
-func NewError(code int, message string) error {
+func New(message string, statusCode int) error {
 	return &Error{
-		Code:    code,
+		Code:    statusCode,
 		Message: message,
 	}
 }
